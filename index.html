@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" /> -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body class="bg-current">
+  <div class="flex justify-center">
+    <div id="sign-warning"
+      class="absolute text-center mt-64 items-center w-full max-w-xs mx-auto p-4 text-gray-500 bg-red-800 rounded-lg shadow dark:text-gray-400 dark:bg-red-800">
+      <div class=" w-full text-orange-500 bg-orange-100 rounded-sm dark:bg-red-800 dark:text-orange-200">
+        <svg aria-hidden="true" class="w-8 h-8 mx-auto text-center" fill="currentColor" viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </div>
+      <div class="ml-3 text-sm font-normal" id="selectSignWarning"></div>
+    </div>
+  </div>
+
+  <div class="flex justify-center">
+    <h1 class="text-6xl text-white mt-3 font-bold">Tic-Tac-Toe</h1>
+  </div>
+  <div class="flex justify-center">
+    <div class="flex absolute items-center w-max max-w-xs p-4 pe-5 space-x-4 text-gray-500 divide-x divide-white ">
+      <div class="pl-4 text-white lg:text-[1.2rem] font-normal pe-3" id="player1-sign">Player 1</div>
+      <div class="pl-4 text-white lg:text-[1.2rem] font-normal" id="player2-sign">Player 2</div>
+    </div>
+    <div id="player-win" class="absolute mt-10 items-center p-4 pe-5 w-max max-w-xs text-white"></div>
+    <table class="mt-24">
+      <tbody id="tic-boxes">
+      </tbody>
+    </table>
+  </div>
+  <div class="flex justify-center gap-3 mt-5">
+    <button
+      class="rounded-none bg-gray-900 text-white w-20 h-20 font-bold text-center lg:text-5xl text-5xl"
+      id="one-sign-value" onclick="selectSign(this)" value="◯">◯</button>
+    <button
+      class="rounded-none bg-gray-900 text-white h-20 w-20 font-bold text-center lg:text-5xl text-5xl"
+      id="two-sign-value" onclick="selectSign(this)" value="✕">✕</button>
+  </div>
+  <div class="flex justify-center gap-3 mt-5">
+    <button
+      class="inline-flex justify-center bg-slate-400 px-4 py-1 text-lg font-bold text-center text-black rounded-lg"
+      onclick="resetGame()">Reset
+    </button>
+  </div>
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

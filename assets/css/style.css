@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+h1{
+    font-family: 'Dancing Script', cursive;
+}
+
+#alert{
+    transition: 0.7s ease-in-out;
+    display: none;
+}
+
+ #sign-warning{
+    visibility: hidden;
+}
